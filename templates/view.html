@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sent Emails</title>
+</head>
+<body>
+    <h2>Sent Emails:</h2>
+    <ul>
+    {% for email in emails %}
+        <li>
+            To: {{ email.recipient }} | Subject: {{ email.subject }} | Date: {{ email.date_sent }}
+            <br>
+            Message: {{ email.message }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
